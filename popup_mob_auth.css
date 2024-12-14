@@ -1,0 +1,434 @@
+/*=====================Enter=========================*/
+/*--------------------enter-modal----------------------*/
+.enter-modal-dialog {
+  max-width: 343px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.enter-modal {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1019607843);
+  padding: 20px 16px 16px 16px;
+}
+
+.enter-modal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 18px;
+}
+.enter-modal__close:hover path {
+  stroke: #78808F;
+}
+
+.enter-modal__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 8px;
+}
+.enter-modal__header--mb {
+  margin-bottom: 22px;
+}
+
+.enter-modal__title {
+  display: inline;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  margin: 0 28px 0 0;
+}
+
+.modal__back {
+  width: 32px;
+  height: 32px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.modal__back svg {
+  max-width: 14px;
+}
+.modal__back:hover svg path {
+  stroke: #78808F;
+}
+
+.enter-modal__group {
+  margin-bottom: 28px;
+}
+.enter-modal__group-inner {
+  position: relative;
+}
+
+.enter-modal__input {
+  width: 100%;
+  border: 1px solid #E1E1E5;
+  padding: 14px 16px 14px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.enter-modal__input[readonly] ~ .enter-modal__placeholder {
+  -ms-transform: translateY(-35px);
+  transform: translateY(-35px);
+}
+.enter-modal__input:not([readonly]) {
+  cursor: pointer;
+}
+.enter-modal__input:not([readonly]).enter-modal__input--error {
+  border-color: #EB1C4E;
+}
+.enter-modal__input:not([readonly]):hover {
+  border-color: #ABB6CC;
+}
+.enter-modal__input:not([readonly]):focus ~ .enter-modal__placeholder, .enter-modal__input:not([readonly]):not(:placeholder-shown) ~ .enter-modal__placeholder {
+  -ms-transform: translateY(-35px);
+  transform: translateY(-35px);
+}
+.enter-modal__input:not([readonly]):focus-visible, .enter-modal__input:not([readonly]):active {
+  outline: none;
+  border-color: #000;
+}
+.enter-modal__input:not([readonly]):focus ~ .modal__clear {
+  display: -ms-flexbox;
+  display: flex;
+}
+.enter-modal__input:not([readonly]):hover:not(:placeholder-shown) + .modal__clear svg path {
+  stroke: #78808F;
+}
+.enter-modal__input:not([readonly]):not(:placeholder-shown):not(:focus-visible) {
+  border-color: #E1E1E5;
+}
+.enter-modal__input:not([readonly]):not(:placeholder-shown):not(:focus-visible) ~ .modal__clear {
+  display: -ms-flexbox;
+  display: flex;
+}
+.enter-modal__input:not([readonly]):not(:placeholder-shown):not(:focus-visible).enter-modal__input--error {
+  border-color: #EB1C4E;
+}
+.enter-modal__input--error {
+  border-color: #EB1C4E;
+}
+.enter-modal__input--fill {
+  color: #78808F;
+  background-color: #F7F7FA;
+}
+.enter-modal__input--fill + .modal-edit {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button:not([disabled]):hover {
+  color: #fff;
+  background-color: #00b88b;
+}
+
+.enter-modal__button.button {
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  column-gap: 10px;
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 16px;
+}
+.enter-modal__button.button.button--loading {
+  color: white !important;
+}
+.enter-modal__button.button.button--loading::after {
+  position: relative;
+  margin: 0;
+}
+
+.enter-modal__send-link {
+  width: auto;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.eye-ico.unblind .eye-ico__show {
+  display: block;
+}
+.eye-ico.unblind .eye-ico__hide {
+  display: none;
+}
+.eye-ico .eye-ico__show {
+  display: none;
+}
+
+.enter-modal__placeholder {
+  position: absolute;
+  padding: 1px 5px;
+  left: 16px;
+  top: 50%;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #78808F;
+  background-color: #fff;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.modal__clear,
+.modal__edit {
+  display: none;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.modal__clear svg,
+.modal__edit svg {
+  width: 100%;
+}
+.modal__clear:hover svg path,
+.modal__edit:hover svg path {
+  stroke: #78808F;
+}
+
+.modal__edit {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal__error {
+  margin-top: 6px;
+  padding-inline: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #EB1C4E;
+}
+
+/*--------------------END enter-modal----------------------*/
+/*--------------------password modal----------------------*/
+.password-modal {
+  display: block;
+}
+.password-modal .enter-modal__header {
+  margin-bottom: 12px;
+}
+
+.password-modal__message {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #78808F;
+}
+
+.password-modal__content {
+  margin-bottom: 32px;
+}
+
+.password-modal__value {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.password-change {
+  padding: 0;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #00C293;
+}
+
+.eye-ico {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.eye-ico__show:hover svg path {
+  stroke: #78808F;
+}
+.eye-ico__hide:hover svg path:first-child {
+  fill: #78808F;
+}
+.eye-ico__hide:hover svg path:not(:first-child) {
+  stroke: #78808F;
+}
+
+.password-modal__bottom {
+  margin-top: 14px;
+}
+.password-modal__bottom--right {
+  text-align: right;
+}
+
+.password-modal__forgot {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #00C293;
+}
+
+/*--------------------END password modal----------------------*/
+/*===================== Enter-======================*/
+/*=====================Registration=========================*/
+.reg-modal .enter-modal__group {
+  margin-bottom: 20px;
+}
+
+.modal__policy {
+  margin-top: 16px;
+}
+.modal__policy a {
+  color: #444952;
+}
+
+.policy-modal__note {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #78808F;
+}
+
+.policy-modal__block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.policy-modal__input {
+  position: absolute;
+  box-sizing: border-box;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  display: block;
+  left: 50%;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.policy-modal__input:checked + .policy-modal__false-check svg {
+  display: block;
+}
+
+.policy-modal__false-check {
+  width: 20px;
+  height: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #00C293;
+}
+@media (any-hover: hover) {
+  .policy-modal__false-check {
+    cursor: pointer;
+  }
+}
+.policy-modal__false-check svg {
+  max-width: 10px;
+  width: 100%;
+  display: none;
+}
+
+.policy-modal__confirm {
+  font-size: 12px;
+  line-height: 16px;
+  color: #78808F;
+}
+
+.enter-modal__repair, .password-repair__success {
+  padding: 8px;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 8px;
+  background-color: #FEEDF1;
+  border-radius: 10px;
+}
+
+.repair-enter-modal__icon, .success-password-repair__icon {
+  width: 18px;
+  height: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.repair-enter-modal__icon svg, .success-password-repair__icon svg {
+  width: 100%;
+  max-height: 100%;
+}
+
+.repair-enter-modal__text, .success-password-repair__text {
+  font-size: 14px;
+  line-height: 18px;
+}
+.repair-enter-modal__text a, .success-password-repair__text a {
+  font-weight: 600;
+  color: #00C293;
+}
+
+/*===================== end Registration======================*/
+/*=====================Repair=========================*/
+.password-repair .enter-modal__repair, .password-repair .password-repair__success {
+  margin-bottom: 0;
+}
+
+.password-repair__note {
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.password-repair__row:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.password-repair__success {
+  margin-bottom: 0;
+  background-color: #DBF6F0;
+}
+
+/*===================== end Repair======================*/

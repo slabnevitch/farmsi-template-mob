@@ -133,10 +133,10 @@
 }
 
 .enter-modal__button.button {
+  width: 100%;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
   column-gap: 10px;
-  width: 100%;
   padding: 14px 28px;
   font-size: 16px;
 }
@@ -146,9 +146,11 @@
 .enter-modal__button.button.button--loading::after {
   position: relative;
   margin: 0;
+  width: 18px;
+  height: 18px;
 }
 
-.enter-modal__send-link {
+.enter-modal__send-link.button {
   width: auto;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -413,22 +415,3 @@
 
 /*===================== end Registration======================*/
 /*=====================Repair=========================*/
-.password-repair .enter-modal__repair, .password-repair .password-repair__success {
-  margin-bottom: 0;
-}
-
-.password-repair__note {
-  margin-bottom: 32px;
-  font-size: 14px;
-}
-
-.password-repair__row:not(:last-child) {
-  margin-bottom: 4px;
-}
-
-.password-repair__success {
-  margin-bottom: 0;
-  background-color: #DBF6F0;
-}
-
-/*===================== end Repair======================*/

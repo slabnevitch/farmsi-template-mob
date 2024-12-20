@@ -23,7 +23,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-<script defer src="main.da40795e8a3d5bed637c.js"></script></head>
+<script defer src="main.52f44ce7c5d255fef634.js"></script></head>
 
 <body>
 <div class="site">
@@ -341,6 +341,26 @@
             </div>
         </section>
         <!-- Breadcrumbs end -->
+
+        <div id="authModalsButtons" class="container" style="padding-bottom: 100px">
+      <button data-popup="enterModal" style="margin-bottom: 15px"  class="button button-primary">Вход или регистрация 1.1</button>  
+      <button data-popup="enterPreloaderModal" style="margin-bottom: 15px" class="button button-primary">Вход или регистрация 1.2</button> 
+      <button data-popup="passwordModal" style="margin-bottom: 15px" class="button button-primary">Вход 1.1</button>   
+      <button data-popup="passwordFullModal" style="margin-bottom: 15px" class="button button-primary">Вход 1.2</button>   
+      <button data-popup="passwordErrorModal" style="margin-bottom: 15px" class="button button-primary">Вход ошибки</button>   
+      <button data-popup="regModalEmail" style="margin-bottom: 15px" class="button button-primary">Регистрация 1.1</button>    
+      <button data-popup="regModalPhone" style="margin-bottom: 15px" class="button button-primary">Регистрация 1.2</button>    
+      <button data-popup="regModalPhoneFull" style="margin-bottom: 15px" class="button button-primary">Регистрация 1.3</button>    
+      <button data-popup="enterRegModalEmail" style="margin-bottom: 15px" class="button button-primary">При клике на карандаш 1.1</button> 
+      <button data-popup="enterRegModalPhone" style="margin-bottom: 15px" class="button button-primary">При клике на карандаш 1.2</button> 
+      <button data-popup="passRepairModalEmail" style="margin-bottom: 15px" class="button button-primary">Конфликт почты и телефона 1.1</button>   
+      <button data-popup="passRepairModalPhone" style="margin-bottom: 15px" class="button button-primary">Конфликт почты и телефона 1.2</button>   
+      <button data-popup="regErrorModal" style="margin-bottom: 15px" class="button button-primary">Регистрация ошибки</button> 
+      <button data-popup="repairDefaultModal" style="margin-bottom: 15px" class="button button-primary">Восстановление 1.1</button>
+      <button data-popup="repairEmailModal" style="margin-bottom: 15px" class="button button-primary">Восстановление 1.2</button> 
+      <button data-popup="repairSuccessModal" style="margin-bottom: 15px" class="button button-primary">Успех</button>
+      <button data-popup="phoneEnterErrorModal" style="margin-bottom: 15px" class="button button-primary">Ошибка заполнения телефона</button>
+    </div>
 
         <!-- Advertisings start-->
         <section class="section" style="margin-bottom: 16px;">
@@ -2560,7 +2580,7 @@
 </button>
 
 <!-- auth/registration popups -->
-<div id="enterModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+<div id="enterModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -2584,13 +2604,15 @@
                 </button>
                 <label class="enter-modal__placeholder">Телефон или email</label>
               </div>
+              <div class="modal__error">Поле обязательно для заполнения</div>
             </div>
           </div>
           <button type="button" class="button button-primary enter-modal__button">Продолжить</button>
         </div>
       </div>
     </div>
-    <div id="enterPreloaderModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    
+    <div id="enterPreloaderModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="enter-modal__close">
@@ -2605,7 +2627,7 @@
           <div class="modal__body">
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
-                <input type="text" name="phone" value="+7 (928) 452-15-95" placeholder=" " class="enter-modal__input">
+                <input type="text" name="phone" value="+7 (928) 452-" placeholder=" " class="enter-modal__input">
                 <button type="button" class="modal__clear">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -2614,13 +2636,14 @@
                 </button>
                 <label class="enter-modal__placeholder">Телефон или email</label>
               </div>
+              <div class="modal__error" style="display: block;">Телефон указан не полностью</div>
             </div>
           </div>
           <button type="button" class="button button-primary button--loading enter-modal__button">Продолжить</button>
         </div>
       </div>
     </div>
-    <div id="passwordModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="passwordModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal password-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -2647,7 +2670,7 @@
             </div>
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
-                <input type="password" name="password" placeholder=" " class="enter-modal__input">
+                <input type="text" data-type="password" name="password" placeholder=" " class="enter-modal__input">
                 <label class="enter-modal__placeholder">Пароль</label>
                 <button type="button" class="eye-ico unblind">
                   <div class="eye-ico__show">
@@ -2672,7 +2695,7 @@
         </div>
       </div>
     </div>
-    <div id="passwordFullModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="passwordFullModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal password-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -2699,7 +2722,7 @@
             </div>
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
-                <input autofocus type="pasword" name="password" value="В1623xHK_8jI092" placeholder=" " class="enter-modal__input">
+                <input autofocus type="pasword" data-type="password" name="password" value="В1623xHK_8jI092" placeholder=" " class="enter-modal__input">
                 <label class="enter-modal__placeholder">Пароль</label>
                 <button type="button" class="eye-ico unblind">
                   <div class="eye-ico__show">
@@ -2724,7 +2747,7 @@
         </div>
       </div>
     </div>
-    <div id="passwordErrorModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="passwordErrorModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal password-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -2749,11 +2772,11 @@
                 <button type="button" class="password-change">Изменить</button>
               </div>
             </div>
-            <div class="enter-modal__group">
+            <div class="enter-modal__group enter-modal__group--error">
               <div class="enter-modal__group-inner">
-                <input type="text" name="password" value="В1623xHK_8jI092" placeholder=" " class="enter-modal__input enter-modal__input--error">
+                <input type="text" data-type="password" name="password" value="В1623xHK_8jI092" placeholder=" " class="enter-modal__input enter-modal__input--error">
                 <label class="enter-modal__placeholder">Пароль</label>
-                <button type="button" class="eye-ico">
+                <button type="button" class="eye-ico unblind">
                   <div class="eye-ico__show">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 8C15 9 11.8656 13 8 13C4.13444 13 1 9 1 8C1 7 4.13444 3 8 3C11.8656 3 15 7 15 8Z" stroke="#ABB6CC" stroke-width="2"></path>
@@ -2777,7 +2800,7 @@
         </div>
       </div>
     </div>
-    <div id="regModalEmail" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="regModalEmail" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal reg-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -2833,7 +2856,7 @@
           </div>
           <div class="enter-modal__group">
             <div class="enter-modal__group-inner">
-              <input type="password" data-type="password" name="createpassword" placeholder=" " class="enter-modal__input">
+              <input type="text" data-type="password" name="createpassword" placeholder=" " class="enter-modal__input">
               <label class="enter-modal__placeholder">Придумайте пароль</label>
               <button type="button" class="eye-ico unblind">
                 <div class="eye-ico__show">
@@ -2868,7 +2891,7 @@
         </div>
       </div>
     </div>
-    <div id="regModalPhone" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="regModalPhone" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal reg-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -2924,7 +2947,7 @@
           </div>
           <div class="enter-modal__group">
             <div class="enter-modal__group-inner">
-              <input type="password" data-type="password" name="createpassword" placeholder=" " class="enter-modal__input">
+              <input type="text" data-type="password" name="createpassword" placeholder=" " class="enter-modal__input">
               <label class="enter-modal__placeholder">Придумайте пароль</label>
               <button type="button" class="eye-ico unblind">
                 <div class="eye-ico__show">
@@ -2959,7 +2982,7 @@
         </div>
       </div>
     </div>
-    <div id="regModalPhoneFull" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="regModalPhoneFull" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal reg-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -2980,7 +3003,7 @@
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
                 <input type="text" name="name" placeholder=" " value="Антон Иванов" class="enter-modal__input">
-                <button type="button" class="modal__clear">
+                <button type="button" class="modal__clear active">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3003,7 +3026,7 @@
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
                 <input autocomplete="off" type="text" name="mail" placeholder=" " value="Ivanovivan@gmail.com" class="enter-modal__input">
-                <button type="button" class="modal__clear">
+                <button type="button" class="modal__clear active">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3050,9 +3073,9 @@
         </div>
       </div>
     </div>
-    <div id="enterRegModalEmail" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="enterRegModalEmail" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
-        <div class="enter-modal reg-modal modal-content">
+        <div class="enter-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3065,7 +3088,13 @@
           <div class="modal__body">
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
-                <input autofocus type="text" name="name" placeholder=" " value="ivanovalexey@gmail.com" class="enter-modal__input">
+                <input type="text" name="name" placeholder=" " value="ivanovalexey@gmail.com" class="enter-modal__input">
+                <button type="button" class="modal__clear active">
+                  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
                 <label class="enter-modal__placeholder">Телефон или email</label>
               </div>
             </div>
@@ -3074,9 +3103,9 @@
         </div>
       </div>
     </div>
-    <div id="enterRegModalPhone" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="enterRegModalPhone" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
-        <div class="enter-modal reg-modal modal-content">
+        <div class="enter-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3090,6 +3119,12 @@
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
                 <input type="text" name="name" placeholder=" " value="+7 (928) 452-95-29" class="enter-modal__input">
+                <button type="button" class="modal__clear active">
+                  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
                 <label class="enter-modal__placeholder">Телефон или email</label>
               </div>
             </div>
@@ -3098,9 +3133,9 @@
         </div>
       </div>
     </div>
-    <div id="passRepairModalEmail" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="passRepairModalEmail" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
-        <div class="enter-modal reg-modal modal-content">
+        <div class="enter-modal reg-modal reg-modal--repair modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3119,7 +3154,7 @@
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
                 <input type="text" name="name" placeholder=" " value="Антон Иванов" class="enter-modal__input">
-                <button type="button" class="modal__clear">
+                <button type="button" class="modal__clear active">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3142,7 +3177,7 @@
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
                 <input autocomplete="off" type="text" name="mail" placeholder=" " value="Ivanovivan@gmail.com" class="enter-modal__input">
-                <button type="button" class="modal__clear">
+                <button type="button" class="modal__clear active">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3198,7 +3233,7 @@
         </div>
       </div>
     </div>
-    <div id="passRepairModalPhone" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="passRepairModalPhone" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal reg-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -3219,7 +3254,7 @@
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
                 <input type="text" name="name" placeholder=" " value="Антон Иванов" class="enter-modal__input">
-                <button type="button" class="modal__clear">
+                <button type="button" class="modal__clear active">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3231,7 +3266,7 @@
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
                 <input inputmode="tel" autocomplete="off" type="tel" name="phone" placeholder=" " value="+7 (928) 452-95-29" class="enter-modal__input">
-                <button type="button" class="modal__clear">
+                <button type="button" class="modal__clear active">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">                        </path>
@@ -3298,9 +3333,9 @@
         </div>
       </div>
     </div>
-    <div id="regErrorModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="regErrorModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
-        <div class="enter-modal modal-content">
+        <div class="enter-modal reg-modal modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3316,7 +3351,7 @@
             <p class="enter-modal__title">Регистрация</p>
           </div>
           <div class="modal__body">
-            <div class="enter-modal__group">
+            <div class="enter-modal__group enter-modal__group--error">
               <div class="enter-modal__group-inner">
                 <input type="text" name="name" placeholder=" " class="enter-modal__input enter-modal__input--error">
                 <button type="button" class="modal__clear">
@@ -3340,7 +3375,7 @@
                 <label class="enter-modal__placeholder">Телефон</label>
               </div>
             </div>
-            <div class="enter-modal__group">
+            <div class="enter-modal__group enter-modal__group--error">
               <div class="enter-modal__group-inner">
                 <input autocomplete="off" type="text" name="mail" placeholder=" " class="enter-modal__input enter-modal__input--error">
                 <button type="button" class="modal__clear">
@@ -3354,7 +3389,7 @@
               <div class="modal__error">Заполните почту</div>
             </div>
           </div>
-          <div class="enter-modal__group">
+          <div class="enter-modal__group enter-modal__group--error">
             <div class="enter-modal__group-inner">
               <input type="text" data-type="password" name="createpassword" placeholder=" " class="enter-modal__input enter-modal__input--error">
               <label class="enter-modal__placeholder">Придумайте пароль</label>
@@ -3392,7 +3427,7 @@
         </div>
       </div>
     </div>
-    <div id="repairDefaultModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="repairDefaultModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal password-modal password-repair modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -3416,7 +3451,7 @@
         </div>
       </div>
     </div>
-    <div id="repairEmailModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="repairEmailModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
         <div class="enter-modal password-modal password-repair modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
@@ -3440,9 +3475,9 @@
         </div>
       </div>
     </div>
-    <div id="repairSuccessModal" tabindex="-1" aria-modal="true" role="dialog" class="modal fade">
+    <div id="repairSuccessModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
       <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
-        <div class="enter-modal password-modal password-repair modal-content">
+        <div class="enter-modal password-modal password-repair password-repair--success modal-content">
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3476,26 +3511,50 @@
         </div>
       </div>
     </div>
+
+    <div id="phoneEnterErrorModal" tabindex="-1" aria-modal="true" role="dialog" class="modal">
+      <div class="modal-dialog modal-dialog-centered enter-modal-dialog">
+        <div class="enter-modal reg-modal modal-content">
+          <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <div class="modal__header enter-modal__header">
+            <button type="button" class="modal__back">
+              <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 7H1M1 7L7 1M1 7L7 13" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <p class="enter-modal__title">Регистрация</p>
+          </div>
+          <div class="modal__body">
+            <div class="enter-modal__group">
+              <div class="enter-modal__group-inner">
+                <div class="phone-valid-error">
+                    <div class="phone-valid-error__row">Вторая цифра не может быть: 0, 7, 8</div>
+                     <div class="phone-valid-error__row">Формат ввода +7 (ХХХ) ХХХ-ХХ-ХХ
+                    </div>
+                </div>
+                
+                <input inputmode="tel" autocomplete="off" type="tel" name="phone" placeholder=" " value="+7 (000) 000-__-__" class="enter-modal__input">
+                <button type="button" class="modal__clear active">
+                  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <label class="enter-modal__placeholder">Телефон</label>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="button button-primary enter-modal__button">Зарегистрироваться</button>
+        </div>
+      </div>
+    </div>
 <!-- End auth/registration popups -->
 
-    <div id="authModalsButtons" class="container" style="padding-bottom: 100px">
-      <button data-popup="enterModal" style="margin-bottom: 15px"  class="button button-primary">Вход или регистрация 1.1</button>  
-      <button data-popup="enterPreloaderModal" style="margin-bottom: 15px" class="button button-primary">Вход или регистрация 1.2</button> 
-      <button data-popup="passwordModal" style="margin-bottom: 15px" class="button button-primary">Вход 1.1</button>   
-      <button data-popup="passwordFullModal" style="margin-bottom: 15px" class="button button-primary">Вход 1.2</button>   
-      <button data-popup="passwordErrorModal" style="margin-bottom: 15px" class="button button-primary">Вход ошибки</button>   
-      <button data-popup="regModalEmail" style="margin-bottom: 15px" class="button button-primary">Регистрация 1.1</button>    
-      <button data-popup="regModalPhone" style="margin-bottom: 15px" class="button button-primary">Регистрация 1.2</button>    
-      <button data-popup="regModalPhoneFull" style="margin-bottom: 15px" class="button button-primary">Регистрация 1.3</button>    
-      <button data-popup="enterRegModalEmail" style="margin-bottom: 15px" class="button button-primary">При клике на карандаш 1.1</button> 
-      <button data-popup="enterRegModalPhone" style="margin-bottom: 15px" class="button button-primary">При клике на карандаш 1.2</button> 
-      <button data-popup="passRepairModalEmail" style="margin-bottom: 15px" class="button button-primary">Конфликт почты и телефона 1.1</button>   
-      <button data-popup="passRepairModalPhone" style="margin-bottom: 15px" class="button button-primary">Конфликт почты и телефона 1.2</button>   
-      <button data-popup="regErrorModal" style="margin-bottom: 15px" class="button button-primary">Регистрация ошибки</button> 
-      <button data-popup="repairDefaultModal" style="margin-bottom: 15px" class="button button-primary">Восстановление 1.1</button>
-      <button data-popup="repairEmailModal" style="margin-bottom: 15px" class="button button-primary">Восстановление 1.2</button> 
-      <button data-popup="repairSuccessModal" style="margin-bottom: 15px" class="button button-primary">Успех</button>
-    </div>
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

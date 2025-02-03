@@ -11375,7 +11375,7 @@ const bottomSheet = () => {
     };
     this.showBottomSheet = () => {
       bottomSheet.classList.add("show");
-      document.body.style.overflowY = "hidden";
+      document.body.style.overflow = "hidden";
       this.updateSheetHeight(basetHeight);
     };
     this.updateSheetHeight = height => {
@@ -11388,7 +11388,7 @@ const bottomSheet = () => {
       bottomSheet.classList.remove("show");
       setTimeout(() => {
         if (!bottomSheet.classList.contains('show')) {
-          document.body.style.overflowY = "auto";
+          document.body.style.overflow = "auto";
         }
       }, 100);
     };
@@ -61777,4 +61777,4 @@ $(window).scroll(fixedHeader);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.00330a0364a7d691e2cf.js.map
+//# sourceMappingURL=main.cf03565d308c7bec21df.js.map

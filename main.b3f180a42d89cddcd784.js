@@ -11359,6 +11359,7 @@ const bottomSheet = () => {
     var isDragging = false,
       startY,
       startHeight;
+    const monitor = document.getElementById('monitor').querySelector('h2');
     this.init = () => {
       this.events();
     };
@@ -11377,6 +11378,7 @@ const bottomSheet = () => {
       bottomSheet.classList.add("show");
       document.body.style.overflowY = "hidden";
       this.updateSheetHeight(basetHeight);
+      monitor.textContent = document.body.style.overflowY;
     };
     this.updateSheetHeight = height => {
       sheetContent.style.height = `${height}vh`;
@@ -11391,18 +11393,21 @@ const bottomSheet = () => {
           document.body.style.overflowY = "auto";
         }
       }, 100);
+      monitor.textContent = document.body.style.overflowY;
     };
     this.dragStart = e => {
       isDragging = true;
       startY = e.pageY || e.touches?.[0].pageY;
       startHeight = parseInt(sheetContent.style.height);
       bottomSheet.classList.add("dragging");
+      monitor.textContent = document.body.style.overflowY;
     };
     this.dragging = e => {
       if (!isDragging) return;
       const delta = startY - (e.pageY || e.touches?.[0].pageY);
       const newHeight = startHeight + delta / window.innerHeight * 100;
       this.updateSheetHeight(newHeight);
+      monitor.textContent = document.body.style.overflowY;
     };
     this.dragStop = e => {
       isDragging = false;
@@ -11411,6 +11416,7 @@ const bottomSheet = () => {
       if (e.target.closest('.bottom-sheet__body') == null) {
         sheetHeight < 25 ? this.hideBottomSheet() : sheetHeight > 75 ? this.updateSheetHeight(100) : this.updateSheetHeight(50);
       }
+      monitor.textContent = document.body.style.overflowY;
     };
     this.init();
     return {
@@ -11419,7 +11425,6 @@ const bottomSheet = () => {
     };
   }
   if ($('#variants-bottomsheet').length > 0) {
-    console.log("pizda!");
     const varsSheet = new myBottomSheet('#variants-bottomsheet', '#variantsBottomsheetOpen', 58.86);
   }
   // const avalSheet = new myBottomSheet('#availability-bottomsheet', '#aval-bottomsheet-open', 90);
@@ -61751,4 +61756,4 @@ $(window).scroll(fixedHeader);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.884e141c7c0538cdd453.js.map
+//# sourceMappingURL=main.b3f180a42d89cddcd784.js.map

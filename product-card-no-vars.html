@@ -24,7 +24,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-<script defer src="main.b87a6ff2df326ea98796.js"></script></head>
+<script defer src="main.33c3bbf9142831938d5b.js"></script></head>
 
 <body>
 <div class="site">
@@ -211,7 +211,7 @@
         </div>
     </div>
     <!-- Header Middle-->
-    <div class="header__middle header__fixed">
+    <div class="header__middle header__middle--scrollup-hide header__fixed">
         <div class="container" style="position: relative">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="header__search search">
@@ -960,21 +960,28 @@
                     <div class="col-12">
                         <div class="product-sticky__wrapper">
                             
-                            <div class="product-sticky__actions">
+                            <div class="product-sticky__actions" data-tocart-parent="">
+                                <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
                                 
-                                <div class="product-cart__adding button--loading js-add-block" style="">
+                                <div class="product-cart__adding js-add-block">
                                     <div class="card-adding">
-                                        <button class="button card-adding--minus js-add-minus"></button>
+                                        <button class="button card-adding--minus js-add-minus">
+                                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.16602 1H12.8327" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                            </svg>
+                                        </button>
                                         <div class="card-adding__wrap">
-                                            <input class="card-adding__input js-add-input" type="text" disabled="disabled" value="1">
+                                            <input class="card-adding__input js-add-input" type="text" value="1">
                                         </div>
-                                        <button class="button card-adding--plus js-add-plus"></button>
+                                        <button class="button card-adding--plus js-add-plus">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.99935 1.1665V12.8332M1.16602 6.99984L12.8327 6.99984" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
                                 
-                                <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
-                                
-                                <button class="product-sticky__add-btn button button-primary js-add-cart">В корзину</button>
+                                <button data-tocart-btn="" class="product-sticky__add-btn button button-primary js-add-cart">В корзину</button>
 
                                 <button class="product-sticky__in-cart-btn button button-border">В корзине</button>
                             </div>
@@ -984,7 +991,7 @@
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="display: block; position: static;">
+        <div class="product-sticky" style="display: block;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1014,7 +1021,7 @@
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="display: block; position: static;">
+        <div class="product-sticky" style="display: block;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1023,14 +1030,14 @@
                                 <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
                                 <div class="purchase__price-last">Последняя цена</div>
                             </div>
-                            <button class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</button>
+                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="display: block; position: static;">
+        <div class="product-sticky" style="display: block;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1039,14 +1046,14 @@
                                 <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
                                 <div class="purchase__price-last">Цена на 01.12.2023</div>
                             </div>
-                            <button class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</button>
+                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="display: block; position: static;"">
+        <div class="product-sticky" style="display: block;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1054,19 +1061,19 @@
                             <div class="product-sticky__price-block product-sticky__price-block--absent">
                                 <div class="purchase__price js-purchase-price">Нет в наличии</div>
                             </div>
-                            <button class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</button>
+                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="display: block; position: static;">
+        <div class="product-sticky" style="display: block;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="product-sticky__wrapper">
-                            <button class="product-sticky__add-btn button button-secondary js-add-cart">
+                            <button data-modal="productSearchModal" class="product-sticky__add-btn button button-secondary">
                                 <img src="images/icons/cart-plus-green.svg" alt="alt">
                             </button>
                             <button class="product-sticky__add-btn button button-primary js-add-cart">Есть в 125 аптеках региона</button>
@@ -1076,7 +1083,7 @@
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="display: block; position: static;">
+        <div class="product-sticky" style="display: block;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1090,43 +1097,6 @@
                 </div>
             </div>
         </div><!-- product-sticky -->
-        
-        <div class="attachment-banner">
-                <div class="container">
-                    <!-- <div class="attachment-banner__adv">Реклама</div> -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="attachment-banner__image" style="background-image: url(images/product-card/attachment-banner_bg.jpg);">
-                                <div class="attachment-banner__adv">
-                                    <div class="attachment-banner__adv-content">
-                                        
-
-                                        <div class="attachment-banner__adv-square advertising">
-                                            <div class="advertising__block advertising__block--top" data-id="ad-4">
-                                                <div class="advertising__title">Рекламное размещение</div>
-                                                <div class="advertising__subtitle">
-                                                    ООО&nbsp;«Название длинное компании чтобы посмотреть как вмещается»
-                                                </div>
-                                                <div class="d-flex flex-column align-items-start"><a class="advertising__link" href="https://rostov-na-donu.uteka.ru" target="_blank" rel="nofollow">
-                                                    <div class="advertising__icon advertising__icon--earth"></div>
-                                                    <div class="advertising__desc">https://rostov-na-donu.uteka.ru</div>
-                                                </a><a class="advertising__link js-copy" href="uzk2dklH28Gmckh92Pod00" target="_blank" rel="nofollow">
-                                                    <div class="advertising__icon advertising__icon--copy"></div>
-                                                    <div class="advertising__desc">uzk2dklH28Gmckh92Pod00</div>
-                                                </a>
-                                                <p class="advertising__link advertising__link--complete"><span class="advertising__icon advertising__icon--checked"></span><span class="advertising__desc">ID скопирован</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        <div class="attachment-banner__adv-text" data-id="ad-4">Реклама</div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="product-nav">
             <div class="product-nav__inner">

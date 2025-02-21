@@ -24,7 +24,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-<script defer src="main.b87a6ff2df326ea98796.js"></script></head>
+<script defer src="main.33c3bbf9142831938d5b.js"></script></head>
 
 <body>
 <div class="site">
@@ -211,7 +211,7 @@
         </div>
     </div>
     <!-- Header Middle-->
-    <div class="header__middle header__fixed">
+    <div class="header__middle header__middle--scrollup-hide header__fixed">
         <div class="container" style="position: relative">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="header__search search">
@@ -491,7 +491,7 @@
                         </div>
                       </div>
                         
-                        <button data-modal="productVariantsBig" type="button" class="collapse-button collapse-button--collapsed collapse-button--static">
+                        <button data-modal="productVariantsBig" type="button" class="collapse-button collapse-button--green collapse-button--collapsed collapse-button--static">
                             <span class="collapse-button__expand">Все варианты</span>
                             <svg class="collapse-button__arrow">
                                 <use xlink:href="images/sprites.svg#collarrow"></use>
@@ -792,11 +792,19 @@
                     <div class="purchase__adding">
                         <div class="product-cart__adding button--loading js-add-block" style="display: block;">
                             <div class="card-adding">
-                                <button class="button card-adding--minus js-add-minus"></button>
+                                <button class="button card-adding--minus js-add-minus">
+                                    <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.16602 1H12.8327" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
                                 <div class="card-adding__wrap">
                                     <input class="card-adding__input js-add-input" type="text" disabled="disabled" value="1">
                                 </div>
-                                <button class="button card-adding--plus js-add-plus"></button>
+                                <button class="button card-adding--plus js-add-plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.99935 1.1665V12.8332M1.16602 6.99984L12.8327 6.99984" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <button class="purchase__in-cart-btn button button-border">В корзине</button>
@@ -949,27 +957,34 @@
 </div>
 </section>
 
-        <div class="product-sticky" style="display: block;">
+       <div class="product-sticky" style="display: block; position: static;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="product-sticky__wrapper">
                             
-                            <div class="product-sticky__actions">
+                            <div class="product-sticky__actions" data-tocart-parent="">
+                                <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
                                 
-                                <div class="product-cart__adding button--loading js-add-block" style="">
+                                <div class="product-cart__adding js-add-block">
                                     <div class="card-adding">
-                                        <button class="button card-adding--minus js-add-minus"></button>
+                                        <button class="button card-adding--minus js-add-minus">
+                                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.16602 1H12.8327" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                            </svg>
+                                        </button>
                                         <div class="card-adding__wrap">
-                                            <input class="card-adding__input js-add-input" type="text" disabled="disabled" value="1">
+                                            <input class="card-adding__input js-add-input" type="text" value="1">
                                         </div>
-                                        <button class="button card-adding--plus js-add-plus"></button>
+                                        <button class="button card-adding--plus js-add-plus">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.99935 1.1665V12.8332M1.16602 6.99984L12.8327 6.99984" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
                                 
-                                <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
-                                
-                                <button class="product-sticky__add-btn button button-primary js-add-cart">В корзину</button>
+                                <button data-tocart-btn="" class="product-sticky__add-btn button button-primary js-add-cart">В корзину</button>
 
                                 <button class="product-sticky__in-cart-btn button button-border">В корзине</button>
                             </div>
@@ -979,7 +994,7 @@
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="">
+        <div class="product-sticky" style="display: block; position: static;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -987,13 +1002,21 @@
                                 
                             <div class="product-sticky__actions">
                                 
-                                <div class="product-cart__adding button--loading js-add-block" style="display: block;">
-                                    <div class="card-adding">
-                                        <button class="button card-adding--minus js-add-minus"></button>
+                                <div class="product-cart__adding js-add-block" style="display: block;">
+                                    <div class="card-adding card-adding__wrap--loading">
+                                        <button class="button card-adding--minus js-add-minus">
+                                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.16602 1H12.8327" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                            </svg>
+                                        </button>
                                         <div class="card-adding__wrap">
                                             <input class="card-adding__input js-add-input" type="text" disabled="disabled" value="1">
                                         </div>
-                                        <button class="button card-adding--plus js-add-plus"></button>
+                                        <button class="button card-adding--plus js-add-plus">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.99935 1.1665V12.8332M1.16602 6.99984L12.8327 6.99984" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
                                 
@@ -1009,7 +1032,7 @@
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="">
+        <div class="product-sticky" style="display: block; position: static;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1018,14 +1041,14 @@
                                 <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
                                 <div class="purchase__price-last">Последняя цена</div>
                             </div>
-                            <button class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</button>
+                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="">
+        <div class="product-sticky" style="display: block; position: static;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1034,14 +1057,14 @@
                                 <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
                                 <div class="purchase__price-last">Цена на 01.12.2023</div>
                             </div>
-                            <button class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</button>
+                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="">
+        <div class="product-sticky" style="display: block; position: static;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1049,29 +1072,29 @@
                             <div class="product-sticky__price-block product-sticky__price-block--absent">
                                 <div class="purchase__price js-purchase-price">Нет в наличии</div>
                             </div>
-                            <button class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</button>
+                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="">
+        <div class="product-sticky" style="display: block; position: static;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="product-sticky__wrapper">
-                            <button class="product-sticky__add-btn button button-secondary js-add-cart">
+                            <button data-modal="productSearchModal" class="product-sticky__add-btn button button-secondary">
                                 <img src="images/icons/cart-plus-green.svg" alt="alt">
                             </button>
-                            <button class="product-sticky__add-btn button button-primary js-add-cart">Есть в 125 аптеках региона</button>
+                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Есть в 125 аптеках региона</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
             </div>
         </div><!-- product-sticky -->
 
-        <div class="product-sticky" style="">
+        <div class="product-sticky" style="display: block; position: static;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1085,43 +1108,6 @@
                 </div>
             </div>
         </div><!-- product-sticky -->
-        
-        <div class="attachment-banner">
-                <div class="container">
-                    <!-- <div class="attachment-banner__adv">Реклама</div> -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="attachment-banner__image" style="background-image: url(images/product-card/attachment-banner_bg.jpg);">
-                                <div class="attachment-banner__adv">
-                                    <div class="attachment-banner__adv-content">
-                                        
-
-                                        <div class="attachment-banner__adv-square advertising">
-                                            <div class="advertising__block advertising__block--top" data-id="ad-4">
-                                                <div class="advertising__title">Рекламное размещение</div>
-                                                <div class="advertising__subtitle">
-                                                    ООО&nbsp;«Название длинное компании чтобы посмотреть как вмещается»
-                                                </div>
-                                                <div class="d-flex flex-column align-items-start"><a class="advertising__link" href="https://rostov-na-donu.uteka.ru" target="_blank" rel="nofollow">
-                                                    <div class="advertising__icon advertising__icon--earth"></div>
-                                                    <div class="advertising__desc">https://rostov-na-donu.uteka.ru</div>
-                                                </a><a class="advertising__link js-copy" href="uzk2dklH28Gmckh92Pod00" target="_blank" rel="nofollow">
-                                                    <div class="advertising__icon advertising__icon--copy"></div>
-                                                    <div class="advertising__desc">uzk2dklH28Gmckh92Pod00</div>
-                                                </a>
-                                                <p class="advertising__link advertising__link--complete"><span class="advertising__icon advertising__icon--checked"></span><span class="advertising__desc">ID скопирован</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        <div class="attachment-banner__adv-text" data-id="ad-4">Реклама</div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="product-nav">
             <div class="product-nav__inner">
@@ -5532,6 +5518,124 @@
         </div>
     </div>
 <!-- End  modals отзывов -->
+
+
+<div class="modal" id="deletionConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal__title js-cart-confirm-title">Удалить выбранные товары?</h3>
+                <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.332 4.66675L4.66536 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4.66797 4.66675L15.3346 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal__description">Отменить это действие будет невозможно</p>
+            </div>
+            <div class="modal-footer">
+                <button class="button button-red js-cart-confirm-deletion">Удалить</button>
+                <button type="button" class="button button-solid" data-bs-dismiss="modal">Отменить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal share-modal" id="shareModal" aria-modal="true" role="dialog" style="">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-wrapper">
+            <div class="modal-header">
+                <h3 class="modal__title js-cart-confirm-title">Поделиться</h3>
+                <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.332 4.66675L4.66536 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4.66797 4.66675L15.3346 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal__variant modal__variant--socials">
+                <p class="modal__text">Через соц.сети</p>
+                <div class="modal__socials">
+                    <a class="modal__social modal__social--vk" href="#">
+                        <img src="images/icons/VK.svg" alt="Vkontakte">
+                    </a>
+                    <a class="modal__social modal__social--ok" href="#">
+                        <img src="images/icons/OK.svg" alt="OK.ru">
+                    </a>
+                    <a class="modal__social modal__social--tg" href="#">
+                        <img src="images/icons/TG.svg" alt="Telegram">
+                    </a>
+                    <a class="modal__social modal__social--wa" href="#">
+                        <img src="images/icons/WA.svg" alt="Whatsapp">
+                    </a>
+                    <a class="modal__social modal__social--vi" href="#">
+                        <img src="images/icons/VB.svg" alt="Viber">
+                    </a>
+                </div>
+            </div>
+            <div class="modal__variant modal__variant--link">
+                <p class="modal__text">Прямой ссылкой</p>
+                <div class="modal__link">
+                    <img class="modal__link--icon" src="images/icons/copy.svg" alt="Копировать">
+                    <span class="modal__link--url" data-url="https://farmsi.ru/catalog/bisoprolol/239673">https://farmsi.ru/catalog/bisoprolol/239673</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal show" id="productSearchModal" tabindex="-1" aria-modal="true" role="dialog" style="">
+    <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal__title">Товара нет в&nbsp;выбранном городе,<br> но&nbsp;есть в&nbsp;других аптеках региона</h3>
+                <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.332 4.66675L4.66536 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4.66797 4.66675L15.3346 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" style=" margin: 4px 0 28px;">
+                <button type="button" class="button button-primary" style="font-size: 16px; line-height: 24px; padding: 12px 28px; width: 100%; margin-top: 16px;">
+                    Посмотреть в аптеках региона
+                </button>
+            </div>
+            <div class="modal-footer">
+                <p class="modal__description js-cart-product-search-description">
+                    Или расширьте поиск на весь регион<br>
+                    <span class="modal__description--green js-cart-product-search-perform" data-bs-dismiss="modal">Москва и МО</span>, чтобы собрать корзину<br>
+                    с этим товаром
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="deletionConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered" style="max-width: 416px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal__title js-cart-confirm-title">Удалить выбранные товары?</h3>
+                <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.332 4.66675L4.66536 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4.66797 4.66675L15.3346 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal__description">Отменить это действие будет невозможно</p>
+            </div>
+            <div class="modal-footer">
+                <button class="button button-red js-cart-confirm-deletion">Удалить</button>
+                <button type="button" class="button button-solid" data-bs-dismiss="modal">Отменить</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div id="productModalsButtons" class="container" style="padding-bottom: 200px;">
         <button data-popup="checkEmailModal" style="margin-bottom: 15px" class="button button-primary">Проверьте почтовый ящик</button>

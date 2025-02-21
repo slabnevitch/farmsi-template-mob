@@ -24,7 +24,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-<script defer src="main.b87a6ff2df326ea98796.js"></script></head>
+<script defer src="main.33c3bbf9142831938d5b.js"></script></head>
 
 <body>
 <div class="site">
@@ -211,7 +211,7 @@
         </div>
     </div>
     <!-- Header Middle-->
-    <div class="header__middle header__fixed">
+    <div class="header__middle header__middle--scrollup-hide header__fixed">
         <div class="container" style="position: relative">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="header__search search">
@@ -380,7 +380,7 @@
                           </div>      
                           <div class="your-review__area area-your-review">
                               <div class="area-your-review__top">
-                                <button type="button" class="product-chars__ques button-share" data-dropdown-id="you-review-what">
+                                <button type="button" class="product-chars__ques button-share area-your-review__info-btn" data-dropdown-id="you-review-what">
                                     <soan class="info-icon">
                                         <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11C1.44772 11 1 10.5523 1 10L1 6C1 5.44771 1.44772 5 2 5C2.55229 5 3 5.44771 3 6L3 10C3 10.5523 2.55228 11 2 11Z" fill="white"></path>
@@ -390,7 +390,7 @@
                                     <soan class="product-chars__ques-val">Что написать?</soan>
                                 </button>
                                 
-                                <div class="products__dropdown your-review__about about-your-review" data-dropdown-id="you-review-what">
+                                <div class="products__dropdown your-review__about about-your-review" data-dropdown-id="you-review-what" style="display:none;">
                                     <div class="about-your-review__body">
                                         <div class="about-your-review__block">
                                             <div class="about-your-review__title">О чем написать в отзыве</div>
@@ -409,22 +409,24 @@
                                         </div>
                                     </div>
 
-                                    <div class="about-your-review__footer">Отзыв об обслуживании в аптеке и о заказе можно оставить <a href="">в личном кабинете</a> в личном кабинете, выбрав нужный заказ</div>
+                                    <div class="about-your-review__footer">Отзыв об обслуживании в аптеке и о заказе можно оставить <a href="">в личном кабинете</a>, выбрав нужный заказ</div>
                                 </div>
                             </div>
                             
                             <div class="enter-modal__group">
                                 <div class="enter-modal__group-inner">
-                                    <label class="textarea-label">
+                                    <div class="form-floating"><textarea class="form-control modal__textarea" name="reportText" id="reportText" placeholder="Причина жалобы" minlength="10" maxlength="200" required=""></textarea> <label for="reportText">Расскажите о неточности <span class="textarea-placeholder__red">*</span></label><div class="invalid-feedback">Введите обращение</div></div>
+                                   
+                                  <!--  <label class="textarea-label">
                                         <textarea class="enter-modal__area enter-modal__input" placeholder=""></textarea>  
-                                        <span class="textarea-placeholder">Мнение о товаре <span class="textarea-placeholder__red">*</span></span>
-                                    </label>
+                                        <span class="textarea-placeholder">Мнение о товаре</span>
+                                    </label> -->
                                 </div>
                                 <div class="modal__error">Введите текст</div>
                             </div>
                           </div>
                           <div class="file-input-zone">
-                                <div class="file-input-zone__thumbs files-thumbs">
+                                <div class="file-input-zone__thumbs files-thumbs" style="margin-left: 0; margin-right: 0;">
                                     <div class="files-thumb">
                                         <button type="button" class="files-thumb__close">
                                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -556,14 +558,14 @@
                                     <button type="submit" class="button button-primary user-your-review__button">Отправить отзыв</button>
                                 </div>
                                 <div class="modal__policy policy-modal">
-                                    <p class="policy-modal__note">Нажимая кнопку «Отправить отзыв», я соглашаюсь с <a href="#">Пользовательским соглашением, Политикой обработки персональных данных</a> и <a href="#"> Правилами публикации отзывов</a>  а так же соглашаюсь на безвозмездную передачу фото и видеофайлов и права на их демонстрацию компании ООО  «ФАРМСИ»</p>
+                                    <p class="policy-modal__note">Нажимая кнопку «Отправить отзыв», я соглашаюсь с <a href="#">Пользовательским соглашением</a>, <a href="#">Политикой обработки персональных данных</a> и <a href="#"> Правилами публикации отзывов</a>  а так же соглашаюсь на безвозмездную передачу фото и видеофайлов и права на их демонстрацию компании ООО  «ФАРМСИ»</p>
                                 </div>
                             </div>
 
-                            <div class="your-review__user user-your-review">
+                            <div class="your-review__user user-your-review field-edit">
                                 <div class="user-your-review__header">Вы оставляете отзыв как</div>
                                 <div class="user-your-review__wrap">
-                                    <div class="user-your-review__left field-edit">
+                                    <div class="user-your-review__left">
                                         <div class="user-your-review__field">
                                             <div class="user-your-review__name">Василий М.</div>
                                             <button type="button" class="modal__edit">
@@ -599,7 +601,7 @@
                             <div class="your-review__user user-your-review">
                                 <div class="user-your-review__header">Вы оставляете отзыв как</div>
                                 <div class="user-your-review__wrap">
-                                    <div class="user-your-review__left field-edit">
+                                    <div class="user-your-review__left">
                                         <div class="user-your-review__field">
                                             <div class="user-your-review__name">Василий М.</div>
                                             <button type="button" class="modal__edit">
@@ -637,9 +639,7 @@
                                         </div>
                                         <div class="repair-enter-modal__text">Вы уже оценили этот товар.<br> <a href="#">Посмотреть отзыв</a></div>
                                       </div>
-
-                                    <button type="submit" class="button button-primary user-your-review__button">Отправить отзыв</button>
-                                    
+                                      <button type="submit" class="button button-primary user-your-review__button button--loading">Отправить отзыв</button>
                                     <p class="policy-modal__note">Нажимая кнопку «Отправить отзыв», я соглашаюсь с <a href="#">Пользовательским соглашением, Политикой обработки персональных данных</a> и <a href="#"> Правилами публикации отзывов</a>  а так же соглашаюсь на безвозмездную передачу фото и видеофайлов и права на их демонстрацию компании ООО  «ФАРМСИ»</p>
                                 </div>
                             </div>
@@ -669,14 +669,14 @@
                           </div>      
                           <div class="your-review__area area-your-review">
                               <div class="area-your-review__top">
-                                <button type="button" class="product-chars__ques button-share" data-dropdown-id="you-review-what">
-                                    <soan class="info-icon">
+                                <button type="button" class="product-chars__ques button-share area-your-review__info-btn" data-dropdown-id="you-review-what">
+                                    <span class="info-icon">
                                         <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11C1.44772 11 1 10.5523 1 10L1 6C1 5.44771 1.44772 5 2 5C2.55229 5 3 5.44771 3 6L3 10C3 10.5523 2.55228 11 2 11Z" fill="white"></path>
                                             <path d="M3.25 2C3.25 1.30964 2.69036 0.75 2 0.75C1.30964 0.75 0.75 1.30964 0.75 2C0.75 2.69036 1.30964 3.25 2 3.25C2.69036 3.25 3.25 2.69036 3.25 2Z" fill="white"></path>
                                         </svg>
-                                    </soan>
-                                    <soan class="product-chars__ques-val">Что написать?</soan>
+                                    </span>
+                                    <span class="product-chars__ques-val">Что написать?</span>
                                 </button>
                                 
                                 <div class="products__dropdown your-review__about about-your-review" data-dropdown-id="you-review-what">
@@ -698,16 +698,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="about-your-review__footer">Отзыв об обслуживании в аптеке и о заказе можно оставить <a href="">в личном кабинете</a> в личном кабинете, выбрав нужный заказ</div>
+                                    <div class="about-your-review__footer">Отзыв об обслуживании в аптеке и о заказе можно оставить <a href="">в личном кабинете</a>, выбрав нужный заказ</div>
                                 </div>
                             </div>
                             
                             <div class="enter-modal__group enter-modal__group--error">
                                 <div class="enter-modal__group-inner">
-                                    <label class="textarea-label">
-                                        <textarea class="enter-modal__area enter-modal__input enter-modal__input--error" placeholder=""></textarea>  
-                                        <span class="textarea-placeholder">Мнение о товаре <span class="textarea-placeholder__red">*</span></span>
-                                    </label>
+                                    <div class="form-floating"><textarea class="form-control modal__textarea" name="reportText" id="reportText" placeholder="Причина жалобы" minlength="10" maxlength="200" required="" invalid=""></textarea> <label for="reportText">Причина жалобы <span class="textarea-placeholder__red">*</span></label></div>
                                 </div>
                                 <div class="modal__error">Введите текст</div>
                             </div>
@@ -716,7 +713,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section
     </main>
 
 
@@ -756,9 +753,8 @@
                     </div>
                     <div class="col-12 mt-4">
                         <form class="d-flex form-group">
-                            <input class="big__input big__input--flat--right big__input--white" type="email"
-                                   name="email" placeholder="E-mail">
-                            <button class="button button-big button-primary button--flat--left" type="submit">
+                            <input class="big__input big__input--flat--right big__input--white" type="email" name="email" placeholder="E-mail">
+                            <button class="footer__subscribe button button-big button-primary button--flat--left" type="submit">
                                 Подписаться
                             </button>
                         </form>

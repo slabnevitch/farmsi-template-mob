@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css">
-<script defer src="main.8fe4973654e4dd621d93.js"></script></head>
+<script defer src="main.017fed828d371b081896.js"></script></head>
 
 <body>
 <div class="site">
@@ -349,7 +349,7 @@
             <div class="container">
                 <div class="banner__grid">
                     <div class="banner">
-                        <a class="bg-light rounded-4" href="#">
+                        <a class="bg-light rounded-4" href="#" style="border-radius: 10px; overflow: hidden;">
                             <img src="images/product-card/banner-mob.jpg"
                                  alt="">
                         </a>
@@ -695,7 +695,7 @@
                 </div>
                 
                 <div class="purchase__buttons">
-                    <a href="#" class="purchase__to-cart-btn button button-primary js-add-cart" type="button">Аналоги от 150 ₽</a>
+                    <a href="#" class="purchase__to-cart-btn button button-primary" type="button">Аналоги от 150 ₽</a>
                     
                     <div class="switcher">
                         <label for="purchase-switcher-1" class="switch__label">Сообщить о поступлении</label>
@@ -726,7 +726,7 @@
                 </div>
                 
                 <div class="purchase__buttons">
-                    <a href="#" class="purchase__to-cart-btn button button-primary js-add-cart" type="button">Аналоги от 150 ₽</a>
+                    <a href="#" class="purchase__to-cart-btn button button-primary" type="button">Аналоги от 150 ₽</a>
                     
                     <div class="switcher">
                         <label for="purchase-switcher-2" class="switch__label">Сообщить о поступлении</label>
@@ -823,7 +823,7 @@
                 </div>
                 
                 <div class="purchase__buttons">
-                    <a href="#" class="purchase__to-cart-btn button button-primary js-add-cart" type="button">Есть в 125 аптеках региона</a>
+                    <a href="#" class="purchase__to-cart-btn button button-primary" type="button">Есть в 125 аптеках региона</a>
 
                     <button data-modal="productSearchModal" class="purchase__button js-select-all-button button button-secondary" style="font-size: 16px;">В корзину</button>
                 </div>
@@ -1107,7 +1107,7 @@
                                 <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
                                 <div class="purchase__price-last">Последняя цена</div>
                             </div>
-                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
+                            <a href="#" class="product-sticky__add-btn button button-primary">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
@@ -1123,7 +1123,7 @@
                                 <div class="purchase__price js-purchase-price">от 10 678 ₽</div>
                                 <div class="purchase__price-last">Цена на 01.12.2023</div>
                             </div>
-                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
+                            <a href="#" class="product-sticky__add-btn button button-primary">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
@@ -1138,7 +1138,7 @@
                             <div class="product-sticky__price-block product-sticky__price-block--absent">
                                 <div class="purchase__price js-purchase-price">Нет в наличии</div>
                             </div>
-                            <a href="#" class="product-sticky__add-btn button button-primary js-add-cart">Аналоги от 150 ₽</a>
+                            <a href="#" class="product-sticky__add-btn button button-primary">Аналоги от 150 ₽</a>
                         </div><!-- product-sticky__wrapper -->
                     </div>
                 </div>
@@ -1186,7 +1186,11 @@
                                 <div class="attachment-banner__adv">
                                     <div class="attachment-banner__adv-content">
                                         <div class="attachment-banner__adv-square">
-                                            <div class="attachment-banner__adv-text advertising__text" data-id="ad-2">Реклама</div>
+                                            <div class="attachment-banner__adv-text advertising__text" data-id="ad-2">
+                                                <div class="attachment-banner__adv-value advertising__text">
+                                                    Реклама 
+                                                </div>
+                                            </div>
                                             <!-- <div class="advertising__text" data-id="ad-2">Реклама</div> -->
                                             <div class="advertising__block advertising__block--top" data-id="ad-2">
                                                 <div class="advertising__header">
@@ -1937,7 +1941,7 @@
                     * Производитель оставляет за собой право без уведомления площадки менять характеристики, внешний вид, комплектацию товара и место его производства. Для уточнения актуальной информации обратитесь к оригинальной инструкции. Указанная информация не является публичной офертой
                 </div>
 
-                <div data-modal="inaccuracyModalAuth" class="product-chars__ques">
+                <div data-modal="inaccuracyModalEmpty" class="product-chars__ques">
                     <div class="info-icon">
                         <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11C1.44772 11 1 10.5523 1 10L1 6C1 5.44771 1.44772 5 2 5C2.55229 5 3 5.44771 3 6L3 10C3 10.5523 2.55228 11 2 11Z" fill="white"/>
@@ -1969,12 +1973,29 @@
                                         <p class="banner__product-text">Имеются противопоказания,<br>
                                             проконсультируйтесь с врачом</p>
                                     </div>
-                                    <div class="banner__product-footer">
-                                        <p class="banner__product-price">от 988 ₽</p>
-                                        
-                                        <button class="button button-primary">В корзину</button>
-                                    </div>
                                 </a>
+                                <div class="banner__product-footer" data-tocart-parent>
+                                    <p class="banner__product-price">от 988 ₽</p>
+                                    <div class="product-cart__adding js-add-block">
+                                        <div class="card-adding">
+                                            <button class="button card-adding--minus js-add-minus">
+                                                <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.16602 1H12.8327" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="card-adding__wrap">
+                                                <input class="card-adding__input js-add-input" type="text" value="1">
+                                            </div>
+                                            <button class="button card-adding--plus js-add-plus">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6.99935 1.1665V12.8332M1.16602 6.99984L12.8327 6.99984" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button class="banner__add-btn button button-primary js-add-cart" data-tocart-btn>В корзину</button>
+                                    <button class="banner__in-cart-btn button button-border">В корзине</button>
+                                </div>
                                 <div class="banner__advertising advertising">
                                     <div class="advertising__text" data-id="ad-4">Реклама</div>
                                     <div class="advertising__block" data-id="ad-4">
@@ -2932,7 +2953,7 @@
 
         <section class="product-blog product-page-sect">
             <div class="container">
-                <p class="title">Блог о здоровье</p>
+                <p class="title">Полезно знать</p>
                 <div class="article-slider position-relative">
                     <div class="swiper">
                         <div class="swiper-wrapper">
@@ -3305,11 +3326,21 @@
                         </div>
 
                         <div class="product-price-watcher__footer">
-                            <div class="product-price-watcher__footer-inner">
-                                <p class="product-price-watcher__text">Купить Бисопролол 2,5 мг 30 шт. таблетки, покрытые пленочной оболочкой в Москве можно заказав в удобной для вас аптеке на ФАРМСИ.ru</p>
-                                <p class="product-price-watcher__text">Цена на Бисопролол 2,5 мг 30 шт. таблетки, покрытые пленочной оболочкой от 547 рублей в Москве</p>
-                                <p class="product-price-watcher__text">Инструкция по применению Бисопролол 2,5 мг 30 шт. таблетки, покрытые пленочной оболочкой </p>  
+                            <div class="cities-slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-price-watcher__footer-inner">
+                                                <p class="product-price-watcher__text">Купить Бисопролол 2,5 мг 30 шт. таблетки, покрытые пленочной оболочкой в Москве можно заказав в удобной для вас аптеке на ФАРМСИ.ru</p>
+                                                <p class="product-price-watcher__text">Цена на Бисопролол 2,5 мг 30 шт. таблетки, покрытые пленочной оболочкой от 547 рублей в Москве</p>
+                                                <p class="product-price-watcher__text">Инструкция по применению Бисопролол 2,5 мг 30 шт. таблетки, покрытые пленочной оболочкой </p>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="navigation--scrollbar"></div>
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
 
@@ -3660,7 +3691,7 @@
             </ul>
         </nav>
     </aside>
-    <div class="scroll-up scroll-up--hidden">
+    <div class="scroll-up scroll-up--on-product scroll-up--hidden">
         <img src="images/icons/arrow-up.svg" alt="" class="scroll-up__icon">
     </div>
     <div class="toast">
@@ -4823,7 +4854,7 @@
             <div class="enter-modal__group" style="margin-bottom: 28px;" data-tooltip-parent-notauth>
               <div class="enter-modal__group-inner">
                 <div class="enter-modal__group-inner">
-                    <input readonly="" autocomplete="off" value="ivanovalexey@gmail.com" type="text" name="mail" placeholder="Email" class="enter-modal__input enter-modal__input--fill">
+                    <input readonly="" autocomplete="off" value="ivanovalexey@gmail.com" type="text" name="mail" placeholder="Email" class="enter-modal__input enter-modal__input--fill" style="border-color: #F2F2F5;">
 
                     <button type="button" class="modal__error-mark" data-bs-toggle="tooltip" data-bs-container="[data-tooltip-parent-notauth]" data-bs-trigger="hover" data-bs-placement="top" data-bs-fallbackplacements="['top']" data-bs-offset="0,0" data-bs-custom-class="modal-mark-tooltip" data-bs-title="Почта не подтверждена" data-bs-original-title="" title="">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5099,7 +5130,7 @@
                         </div>
                     </div>
                     <div class="modal__error">Превышен размер одного фото - 10 MB</div>
-                    <label class="file-input-zone__label">
+                    <label class="file-input-zone__label" style="margin-bottom: 16px">
                         <input class="file-input-zone__input" type="file" name="loaded-files">
                         <span class="file-input-zone__content">
                             <span class="file-input-zone__header">
@@ -5168,7 +5199,7 @@
 
     <div style="" id="inaccuracyModalAuth" tabindex="-1" aria-modal="true" role="dialog" class="modal modal-big">
       <div class="modal-dialog enter-modal-dialog">
-        <div class="enter-modal modal-pb-32 inaccuracy-modal modal-content" data-inaccuracy-modal-auth-succes>
+        <div class="enter-modal inaccuracy-modal modal-content" data-inaccuracy-modal-auth-succes>
           <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -5191,7 +5222,116 @@
                 </div>
                 <div class="policy-modal__block">
                     <label class="policy-modal__check">
+                        <input type="checkbox" name="policy-check" class="policy-modal__input">
+                        <span class="policy-modal__false-check">
+                            <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></span>
+                        <span class="policy-modal__confirm">Фото не соответствует товару</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="enter-modal__group">
+                <div class="form-floating" style="margin-bottom:20px"><textarea class="form-control modal__textarea" name="reportText" id="reportText" placeholder="Причина жалобы" minlength="10" maxlength="200" required=""></textarea> <label for="reportText">Расскажите о неточности</label><div class="invalid-feedback">Введите текст</div></div>
+            <div class="enter-modal__group">
+                <div class="file-input-zone">
+                    <label class="file-input-zone__label">
+                        <input class="file-input-zone__input" type="file" name="loaded-files">
+                        <span class="file-input-zone__content">
+                            <span class="file-input-zone__header">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 8.33333C8.92039 8.33333 9.66659 7.58714 9.66659 6.66667C9.66659 5.74619 8.92039 5 7.99992 5C7.07944 5 6.33325 5.74619 6.33325 6.66667C6.33325 7.58714 7.07944 8.33333 7.99992 8.33333Z" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.3334 1.6665H8.00008C3.83341 1.6665 2.16675 3.33317 2.16675 7.49984V12.4998C2.16675 16.6665 3.83341 18.3332 8.00008 18.3332H13.0001C17.1667 18.3332 18.8334 16.6665 18.8334 12.4998V8.33317" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.625 4.1665H18.2083" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M15.9167 6.45833V1.875" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M2.7251 15.7918L6.83343 13.0335C7.49176 12.5918 8.44176 12.6418 9.03343 13.1501L9.30843 13.3918C9.95843 13.9501 11.0084 13.9501 11.6584 13.3918L15.1251 10.4168C15.7751 9.85846 16.8251 9.85846 17.4751 10.4168L18.8334 11.5835" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="file-input-zone__title">Прикрепить фото</span>
+                            </span>
+                            <span class="file-input-zone__note file-input-zone__note--simple">Не более 10-ти фото до 10 MB каждое, jpg, jpeg или png</span> 
+                        </span>
+
+                    </label>
+                </div>
+                <!-- <div class="file-input-zone file-input-zone--full">
+                    <label class="file-input-zone__label">
+                        <input class="file-input-zone__input" type="file" name="loaded-files">
+                        <span class="file-input-zone__content">
+                            <span class="file-input-zone__header">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99992 8.33333C8.92039 8.33333 9.66659 7.58714 9.66659 6.66667C9.66659 5.74619 8.92039 5 7.99992 5C7.07944 5 6.33325 5.74619 6.33325 6.66667C6.33325 7.58714 7.07944 8.33333 7.99992 8.33333Z" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.3334 1.6665H8.00008C3.83341 1.6665 2.16675 3.33317 2.16675 7.49984V12.4998C2.16675 16.6665 3.83341 18.3332 8.00008 18.3332H13.0001C17.1667 18.3332 18.8334 16.6665 18.8334 12.4998V8.33317" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.625 4.1665H18.2083" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M15.9167 6.45833V1.875" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M2.7251 15.7918L6.83343 13.0335C7.49176 12.5918 8.44176 12.6418 9.03343 13.1501L9.30843 13.3918C9.95843 13.9501 11.0084 13.9501 11.6584 13.3918L15.1251 10.4168C15.7751 9.85846 16.8251 9.85846 17.4751 10.4168L18.8334 11.5835" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="file-input-zone__title">Прикрепить фото</span>
+                            </span>
+                            <span class="file-input-zone__note file-input-zone__note--simple">Не более 10-ти фото до 10 MB каждое, jpg, jpeg или png</span>
+                            <span class="file-input-zone__note file-input-zone__note--max">Вы загрузили максимальное количество фотографий</span> 
+                        </span>
+
+                    </label>
+                </div> -->
+            </div>
+
+            <div class="enter-modal__group enter-modal__group--mb-32">
+              <div class="enter-modal__group-inner">
+                <input readonly="" autocomplete="off" value="ivanovalexey@gmail.com" type="text" name="mail" placeholder="Email" class="enter-modal__input enter-modal__input--fill enter-modal__input--success" style="border-color: #F2F2F5;">
+
+                <button type="button" class="modal__success-mark" data-bs-toggle="tooltip" data-bs-container="[data-inaccuracy-modal-auth-succes]" data-bs-trigger="hover" data-bs-placement="top" data-bs-fallbackplacements="['top','top','top','top']" data-bs-offset="0,0" data-bs-custom-class="info-tooltip" data-bs-title="Почта подтверждена" data-bs-original-title="" title="">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="ic20-check">
+                            <path id="Icon" fill-rule="evenodd" clip-rule="evenodd" d="M3.70711 9.2929C3.31658 8.90238 2.68342 8.90238 2.29289 9.2929C1.90237 9.68343 1.90237 10.3166 2.29289 10.7071L7.29289 15.7071C7.69802 16.1122 8.36002 16.0948 8.74329 15.669L17.7433 5.66897C18.1128 5.25846 18.0795 4.62617 17.669 4.25671C17.2585 3.88726 16.6262 3.92053 16.2567 4.33104L7.96181 13.5476L3.70711 9.2929Z" fill="#00C293"></path>
+                        </g>
+                    </svg>
+                </button>
+                <label class="enter-modal__placeholder">Email</label>
+              </div>
+            </div>
+            
+            <div class="enter-modal__group">
+                <button type="button" data-bs-dismiss="modal" data-toast-regard="Спасибо, что помогаете нам!<br> Мы скоро все проверим" class="button button-primary enter-modal__button">Отправить</button>
+            </div>
+
+            <div class="modal__policy policy-modal">
+                <p class="policy-modal__note">Нажимая кнопку «Отправить», я соглашаюсь с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div style="" id="inaccuracyModalEmpty" tabindex="-1" aria-modal="true" role="dialog" class="modal modal-big">
+      <div class="modal-dialog enter-modal-dialog">
+        <div class="enter-modal inaccuracy-modal modal-content" data-inaccuracy-modal-auth-succes>
+          <button type="button" data-bs-dismiss="modal" aria-label="Close" class="modal__close enter-modal__close">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <div class="modal__header enter-modal__header">
+            <p class="enter-modal__title">Сообщить о неточности</p>
+          </div>
+          <div class="modal__body">
+            <div class="modal__checks-block">
+                <div class="policy-modal__block">
+                    <label class="policy-modal__check">
                         <input type="checkbox" name="policy-check" class="policy-modal__input"><span class="policy-modal__false-check">
+                            <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></span>
+                        <span class="policy-modal__confirm">Неточность в характеристиках или описании</span>
+                    </label>
+                </div>
+                <div class="policy-modal__block">
+                    <label class="policy-modal__check">
+                        <input type="checkbox" name="policy-check" class="policy-modal__input">
+                        <span class="policy-modal__false-check">
                             <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg></span>
@@ -5262,7 +5402,7 @@
             </div>
 
             <div class="modal__policy policy-modal">
-                <p class="policy-modal__note">Нажимая кнопку «Отправить», я соглашаюсь с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки</a> персональных данных</p>
+                <p class="policy-modal__note">Нажимая кнопку «Отправить», я соглашаюсь с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
             </div>
 
         </div>
@@ -5291,7 +5431,7 @@
               <div class="password-repair__row">Подтвердите, пожалуйста, свою почту, чтобы мы могли сообщить о поступлении товара</div>
             </div>
           </div>
-          <div class="password-modal__bottom">
+          <div class="password-modal__bottom" style="margin-top: 20px">
             <button data-modal="checkEmailModal" data-bs-dismiss="modal" data-modal-close="emailConfirmationModal" type="button" class="button button-primary enter-modal__button">Отправить</button>
           </div>
         </div>
@@ -5312,13 +5452,13 @@
           </div>
           <div class="modal__body">
             <div class="password-repair__note">
-              <div class="password-repair__row">На почту <span class="password-modal__value" style="margin-right: 0;">ivanovalexey@gmail.com</span> будет отправлено письмо</div>
+              <div class="password-repair__row">На почту <span class="password-modal__value" style="margin-right: 0; font-size: 14px;">ivanovalexey@gmail.com</span> отправлено письмо</div>
               <div class="password-repair__row">Подтвердите, пожалуйста, свою почту, чтобы мы могли отправить уведомление  о снижении цены</div>
               <div class="password-modal__message">Если письма нет во входящих, проверьте папку «Спам»</div>
             </div>
           </div>
-          <div class="password-modal__bottom">
-            <button data-modal="checkEmailModal" data-bs-dismiss="modal" data-modal-close="emailConfirmationModal" type="button" class="button button-primary enter-modal__button">Отправить</button>
+          <div class="password-modal__bottom" style="margin-top: 20px;">
+            <button data-bs-dismiss="modal" data-modal-close="emailConfirmationModal" type="button" class="button button-primary enter-modal__button">Хорошо</button>
           </div>
         </div>
       </div>
@@ -5340,7 +5480,7 @@
             <div class="password-repair__note">
               <div class="password-repair__row">Если письма нет во входящих, проверьте папку «Спам»</div>
             </div>
-            <div class="password-repair__success success-password-repair">
+            <div class="password-repair__success success-password-repair" style="margin-top: 20px; margin-bottom: 0;">
               <div class="success-password-repair__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_286_1062)">
@@ -5354,7 +5494,7 @@
                   </defs>
                 </svg>
               </div>
-              <div class="success-password-repair__text">Письмо для подтверждения email отправлено<br> на вашу почту</div>
+              <div class="success-password-repair__text">Письмо для подтверждения email отправлено на вашу почту</div>
             </div>
           </div>
         </div>
@@ -5379,7 +5519,7 @@
             </div>
             <div class="enter-modal__group" style="margin-bottom: 32px;">
               <div class="enter-modal__group-inner">
-                <input autocomplete="off" type="text" name="mail" placeholder="Email" class="enter-modal__input">
+                <input autocomplete="off" type="text" name="mail" placeholder=" " class="enter-modal__input">
                 <button type="button" class="modal__clear">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -5425,7 +5565,7 @@
             </div>
             <div class="enter-modal__group enter-modal__group--error">
               <div class="enter-modal__group-inner">
-                <input autocomplete="off" type="text" name="mail" placeholder="Email" class="enter-modal__input enter-modal__input--error">
+                <input autocomplete="off" type="text" name="mail" placeholder=" " class="enter-modal__input enter-modal__input--error">
                 <button type="button" class="modal__clear">
                   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -5485,7 +5625,8 @@
             </div>
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
-                <input readonly autocomplete="off" value="ivanovalexey@gmail.com" type="text" name="mail" placeholder="Email" class="enter-modal__input enter-modal__input--fill enter-modal__input--success">
+                <input readonly autocomplete="off" value="ivanovalexey@gmail.com" type="text" name="mail" placeholder="Email" class="enter-modal__input enter-modal__input--fill enter-modal__input--success" style="border-color: #F2F2F5;">
+
                 <button type="button" class="modal__success-mark" data-bs-toggle="tooltip" data-bs-container="[data-tooltip-parent-success]" data-bs-trigger="hover" data-bs-placement="top" data-bs-fallbackPlacements="['top','top','top','top']" data-bs-offset="0,0" data-bs-custom-class="info-tooltip" data-bs-title="Почта подтверждена">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="ic20-check">
@@ -5532,7 +5673,7 @@
             </div>
             <div class="enter-modal__group">
               <div class="enter-modal__group-inner">
-                <input readonly autocomplete="off" value="ivanovalexey@gmail.com" type="text" name="mail" placeholder="Email" class="enter-modal__input enter-modal__input--fill">
+                <input readonly autocomplete="off" value="ivanovalexey@gmail.com" type="text" name="mail" placeholder="Email" class="enter-modal__input enter-modal__input--fill" style="border-color: #F2F2F5;">
 
                 <button type="button" class="modal__error-mark" data-bs-toggle="tooltip" data-bs-container="[data-tooltip-parent-error]" data-bs-trigger="hover" data-bs-placement="top" data-bs-fallbackPlacements="['top']" data-bs-offset="0,0" data-bs-custom-class="modal-mark-tooltip" data-bs-title="Почта не подтверждена">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5544,7 +5685,7 @@
                 <label class="enter-modal__placeholder">Email</label>
               </div>
             </div>
-            <button data-bs-dismiss="modal" data-modal="priceWatchlModalConfirm" type="button" class="button button-primary enter-modal__button">Сообщить</button>
+            <button data-bs-dismiss="modal" data-modal="emailConfirmationModalNotAuth" type="button" class="button button-primary enter-modal__button">Сообщить</button>
             <div class="modal__policy policy-modal">
             <p class="policy-modal__note">Нажимая кнопку «Сообщить», я соглашаюсь с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
                 <div class="policy-modal__block">
@@ -5576,10 +5717,10 @@
           </div>
           <div class="modal__body">
             <div class="password-repair__note">
-              <div class="password-repair__row">Отправим письмо на почту <span class="password-modal__value" style="margin-right: 0;">ivanovalexey@gmail.com,</span><br> когда цена на товар снизится</div>
+              <div class="password-repair__row">Отправим письмо на почту <span class="password-modal__value" style="margin-right: 0; font-size: 14px;">ivanovalexey@gmail.com,</span><br> когда цена на товар снизится</div>
             </div>
           </div>
-          <div class="password-modal__bottom">
+          <div class="password-modal__bottom" style="margin-top: 20px;">
             <button data-bs-dismiss="modal" data-modal-close="priceWatchlModalSpy" type="button" class="button button-primary enter-modal__button">Понятно</button>
           </div>
         </div>
@@ -5713,7 +5854,7 @@
                                                     </div><span class="variants-card__text"><span class="variants-card__unit">800 мл</span><span class="variants-card__price">от 10 678 ₽</span><span class="variants-card__fraction">от 150,35 ₽ / ед</span></span></span>
                                                 </label>
                                                 <label class="variants-cards__item">
-                                                  <input type="radio" disabled name="variant-3NaN" class="variant-card__radio"><span class="variants-card">
+                                                  <input type="radio" name="variant-3NaN" class="variant-card__radio variant-card__radio--disabled"><span class="variants-card">
                                                     <div class="variants-card__top"><span class="variants-card__image"><img src="images/product-card/product-slider/nav-slider/2.jpg" alt="alt"></span><span data-bs-toggle="tooltip" data-bs-container=".variants-modal" data-bs-trigger="hover" data-bs-placement="top" data-bs-offset="0,0" data-bs-custom-class="variant-casback-tooltip" data-bs-title="Получите кешбэк 170 ₽ после прохождения опроса" class="variants-card__label"><span class="variants-card__crypto"><img src="images/product-card/icons/buy-crypto.svg" alt="alt"></span><span class="variants-card__crypto-val">170 ₽</span></span>
                                                     </div><span class="variants-card__text"><span class="variants-card__unit">30 шт</span><span class="variants-card__price">Нет в наличии</span><span class="variants-card__fraction">от 150,35 ₽ / ед</span></span></span>
                                                 </label>
@@ -5968,7 +6109,7 @@
             <p class="enter-modal__title">Войдите, чтобы оставить отзыв</p>
           </div>
           <div class="modal__body">
-            <div class="password-repair__note" style="margin-bottom: 32px;">
+            <div class="password-repair__note" style="margin-bottom: 28px;">
               <div class="password-repair__row">Оставить отзыв можно только на выкупленный товар</div>
             </div>
             <div class="enter-modal__group">
@@ -6062,7 +6203,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal-wrapper">
             <div class="modal-header">
-                <h3 class="modal__title js-cart-confirm-title">Поделиться</h3>
+                <h3 class="modal__title">Поделиться</h3>
                 <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.332 4.66675L4.66536 15.3334" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -6160,7 +6301,7 @@
         <button data-popup="reviewEnterModal" style="margin-bottom: 15px; white-space: pre-wrap;" class="button button-primary"> Оставить отзыв, если не авторизован</button>
         <button data-popup="productSearchModal" style="margin-bottom: 15px; white-space: pre-wrap;" class="button button-primary"> Клик на “В корзину”, нет в городе, есть в регионе</button>
 
-        <button data-popup="inaccuracyModalAuth" style="margin-bottom: 15px; white-space: pre-wrap;" class="button button-primary">Сообщить о неточности - неавторизован</button>
+        <button data-popup="inaccuracyModalEmpty" style="margin-bottom: 15px; white-space: pre-wrap;" class="button button-primary">Сообщить о неточности - неавторизован</button>
         <button data-popup="inaccuracyModalNotAuth" style="margin-bottom: 15px; white-space: pre-wrap;" class="button button-primary">Сообщить о неточности - почта не подтверждена</button>
         <button data-popup="inaccuracyModalAuth" style="margin-bottom: 15px; white-space: pre-wrap;" class="button button-primary">Сообщить о неточности - почта подтверждена</button>
         <button data-popup="inaccuracyModalNotAuthFull" style="margin-bottom: 15px; white-space: pre-wrap;" class="button button-primary">Сообщить о неточности - фото загружены</button>

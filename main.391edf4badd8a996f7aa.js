@@ -12398,11 +12398,11 @@ const productModals = () => {
   if ($("#productVariantsBig").length > 0) {
     var productVariantsBig = new bootstrap.Modal($("#productVariantsBig"), {});
     $("#productVariantsBig").on('show.bs.modal', function () {
-      $('html').css('overflow', 'hidden');
+      $('html').addClass('is-lock-scroll');
     });
     $("#productVariantsBig").on('hide.bs.modal', function () {
       $('.variants-view__body').scrollTop(0);
-      $('html').css('overflow', 'auto');
+      $('html').removeClass('is-lock-scroll');
     });
   }
   if ($('#productVariantsBig2').length > 0) {
@@ -63523,4 +63523,4 @@ $(window).scroll(fixedHeader);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.e223a9ae9198208860fc.js.map
+//# sourceMappingURL=main.391edf4badd8a996f7aa.js.map

@@ -12395,18 +12395,18 @@ const productModals = () => {
   if ($("#inaccuracyModalNotAuthFullErrors").length > 0) {
     var inaccuracyModalNotAuthFullErrors = new bootstrap.Modal($("#inaccuracyModalNotAuthFullErrors"), {});
   }
-  // if($("#productVariantsBig").length > 0){	
-  // 	var productVariantsBig = new bootstrap.Modal($("#productVariantsBig"), {});
+  if ($("#productVariantsBig").length > 0) {
+    var productVariantsBig = new bootstrap.Modal($("#productVariantsBig"), {});
 
-  // 	$("#productVariantsBig").on('show.bs.modal', function () {
-  // 	  $('html').addClass('is-lock-scroll');
-  // 	});
+    // 	$("#productVariantsBig").on('show.bs.modal', function () {
+    // 	  $('html').addClass('is-lock-scroll');
+    // 	});
 
-  // 	$("#productVariantsBig").on('hide.bs.modal', function () {
-  // 	  $('.variants-view__body').scrollTop(0);
-  // 	  $('html').removeClass('is-lock-scroll');
-  // 	});
-  // }
+    $("#productVariantsBig").on('hide.bs.modal', function () {
+      $('.variants-view__body, .variants-body').scrollTop(0);
+      // $('html').removeClass('is-lock-scroll');
+    });
+  }
   if ($('#productVariantsBig2').length > 0) {
     var productVariantsBig2 = new bootstrap.Modal($("#productVariantsBig2"), {});
   }
@@ -63544,4 +63544,4 @@ $(window).scroll(fixedHeader);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.bde59e1de9ba6d9f8835.js.map
+//# sourceMappingURL=main.18b0244968903a62189c.js.map
